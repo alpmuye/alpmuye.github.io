@@ -10,6 +10,5 @@ I'm broadly interested in extremal combinatorics. In particular, I'm interested 
 Here is a link to the [UCL Combinatorics Seminar](https://uclcombiseminar.github.io).
 
 
-
 ---
 
