@@ -1,6 +1,5 @@
-- name: Past Talks
-  link: /pasttalks
-- name: Upcoming Talks
-  link: /upcomingtalks
-- name: Home
+
+- name: Research
+  link: /research
+- name: About
   link: /

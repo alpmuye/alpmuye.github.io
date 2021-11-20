@@ -1,34 +1,15 @@
 ---
-title: UCL Combinatorics seminar
+title: Alp Müyesser
+---
+<img src="/assets/images/photo.jpeg" alt="A photo of me" class="profile" width=400/>
+
+I'm a first year PhD student at the [University College London](https://www.ucl.ac.uk) where I'm supervised by [Alexey Pokrovskiy](https://alexeypokrovskiy.com).  Previously, I did a masters degree supervised by [Tibor Szabó](http://page.mi.fu-berlin.de/szabo/) at [Freie Universität Berlin](https://www.fu-berlin.de/en/index.html). Before that, I was an undergraduate at [Carnegie Mellon University](https://www.cmu.edu). 
+
+I'm broadly interested in extremal combinatorics. In particular, I'm interested in hypergraph matchings, Latin squares, and Ramsey theory.
+
+Here is a link to the [UCL Combinatorics Seminar](https://uclcombiseminar.github.io).
+
+
+
 ---
 
-The University College London (UCL) Combinatorics Seminar takes place weekly on Mondays, from 4pm to 5pm, at 25 Gordon Street (UCLU Building) Room 706. It is organised by [Shoham Letzter](http://www.homepages.ucl.ac.uk/~ucahsle/)  and [Alexey Pokrovskiy](https://alexeypokrovskiy.com). 
-
-To subscribe to the mailing list, please email Shoham Letzter at s [dot] letzter [at] ucl [dot] ac [dot] uk.
-
----
-
-# Next Speaker
-<br>
-<ul class="post-list">
-{% capture currentDate %}
-  {{ 'now' | date: '%s'}}
-  {% endcapture %}
-  {% for post in site.posts reversed %}
-  {% capture postDate %}
-  {{ post.date | date: '%s'}}
-  {% endcapture %}
-    {% if currentDate < postDate %}
-    <!-- Don't show drafts -->
-    <li>
-      <h2>{{ post.title }} - <a href="{{ post.speaker-url }}">{{ post.speaker }}</a> ({{ post.speaker-uni }})</h2>
-      <h2>{{ post.subtitle }}</h2>
-      <br>
-      <p>{{ post.excerpt }}</p>
-      <br><br>
-    </li>
-    {%break%} 
-    {% else %}
-    {% endif %}
-  {% endfor %}
-</ul>
