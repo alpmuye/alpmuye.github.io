@@ -7,6 +7,9 @@ title: Research
 <br/>
 
 <h3>Preprints</h3>
+* [Splitting matchings and the Ryser-Brualdi-Stein conjecture for multisets](https://arxiv.org/pdf/2212.03100.pdf), with Michael Anastos, David Fabian, and Tibor Szab&#243;.
+* [A general approach to transversal versions of Dirac-type theorems](https://arxiv.org/pdf/2209.09289.pdf), with Pranshu Gupta, Fabian Hamann, Olaf Parczyk, and Amadeo Sgueglia.
+* [Unavoidable patterns in locally balanced colourings](https://arxiv.org/pdf/2209.06807.pdf), with Nina Kam&#269;ev.
 * [A random Hall-Paige conjecture](https://arxiv.org/abs/2204.09666), with Alexey Pokrovskiy.
 * [Colored unavoidable patterns and balanceable graphs](https://arxiv.org/abs/1912.06302), with Matt Bowen, Adriana Hansberg, and Amanda Montejano.
 
