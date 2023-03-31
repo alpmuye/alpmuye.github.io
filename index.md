@@ -1,14 +1,14 @@
 ---
 title: Alp Müyesser
 ---
-<img src="/assets/images/photo.jpeg" alt="A photo of me" class="profile" width=400/>
+<img style="float: right;" src="/assets/images/photo.jpeg" alt="A photo of me" class="profile" width=400/>
 
 I'm a second year PhD student at the [University College London](https://www.ucl.ac.uk) where I'm supervised by [Alexey Pokrovskiy](https://alexeypokrovskiy.com).  Previously, I did a masters degree supervised by [Tibor Szabó](http://page.mi.fu-berlin.de/szabo/) at [Freie Universität Berlin](https://www.fu-berlin.de/en/index.html). Before that, I was an undergraduate at [Carnegie Mellon University](https://www.cmu.edu). 
 
 I'm interested in extremal and probabilistic combinatorics. See my [Research](/research) page to see my papers. Below are some highlights. 
-<br/><br/><br/>
-<h3>Selected papers</h3>
 <br/>
+<h2>Selected papers</h2>
+<p style="margin-bottom:0.15cm;"></p>
 * [A random Hall-Paige conjecture](https://arxiv.org/abs/2204.09666)  
 with Alexey Pokrovskiy  
 
