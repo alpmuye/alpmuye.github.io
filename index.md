@@ -3,9 +3,9 @@ title: Alp Müyesser
 ---
 <img style="float: right;" src="/assets/images/photo.jpeg" alt="A photo of me" class="profile" width=400/>
 
-I'm a second year PhD student at the [University College London](https://www.ucl.ac.uk) where I'm supervised by [Alexey Pokrovskiy](https://alexeypokrovskiy.com).  Previously, I did a masters degree supervised by [Tibor Szabó](http://page.mi.fu-berlin.de/szabo/) at [Freie Universität Berlin](https://www.fu-berlin.de/en/index.html). Before that, I was an undergraduate at [Carnegie Mellon University](https://www.cmu.edu). 
+I'm a third year PhD student (graduating in 2024) at [University College London](https://www.ucl.ac.uk) where I'm supervised by [Alexey Pokrovskiy](https://alexeypokrovskiy.com).  Previously, I did a masters degree supervised by [Tibor Szabó](http://page.mi.fu-berlin.de/szabo/) at [Freie Universität Berlin](https://www.fu-berlin.de/en/index.html). Before that, I was an undergraduate at [Carnegie Mellon University](https://www.cmu.edu). 
 
-I'm interested in extremal and probabilistic combinatorics. See my [Research](/research) page to see my papers. Below are some highlights. 
+I'm interested in extremal and probabilistic combinatorics, Latin squares, graph theory, and spanning subgraphs. See the [Research](/research) page to see my papers. Below are some highlights. 
 <br/>
 <h2>Selected papers</h2>
 <p style="margin-bottom:0.15cm;"></p>
@@ -24,6 +24,7 @@ _Advances in Combinatorics_, 2022
 
 * [A general approach to transversal versions of Dirac-type theorems](https://arxiv.org/pdf/2209.09289.pdf)  
 with Pranshu Gupta, Fabian Hamann, Olaf Parczyk, and Amedeo Sgueglia  
+To appear in _Bulletin of the London Mathematical Society_   
 
 These papers investigate when the minimum degree threshold and the *rainbow* minimum degree threshold for the containment of a spanning structure are asymptotically the same. The second paper, building on tools from the first, gives a sufficient condition for when this happens. The condition (roughly speaking) is the existence of an absorption-based proof for the uncoloured version of the problem. Such absorption-based proofs are ubiquitous in the literature, hence this condition is easy to check for a large family of spanning structures. This yields rainbow versions of many classical results in extremal graph theory. 
   <br/>  <br/>
