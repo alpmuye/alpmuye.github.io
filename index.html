@@ -14,157 +14,149 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <style>
+    .image {
+      width: 60%; /* You can use a percentage value here */
+    }
+    
+    .bigger-text {
+      font-size: 16px;
+    }
+    </style>
 </head>
-<body class="bigger-text">
 
+<body class="bigger-text">
 
 <!-- Navigation -->
 	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		  <div class="navbar-header">
+		    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-		</div>
+		  </div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				<!--  <li><a href="index.html">Home</a></li>
-				  <li><a href="#">Projects</a></li>
-				  <li><a href="#publications">Publications</a></li>
-				  <li><a href="#">CV</a></li> -->
-		  </ul>
-		</div>
+		  <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <!--  <li><a href="index.html">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#">CV</a></li> -->
+        </ul>
+      </div>
 	  </div>
 	</nav>
 
   <!-- Page Content -->
-    <div class="container">
+  <div class="container">
 
-        <div class="row">
+    <div class="row">
 
-            <!-- Entries Column -->
-            <div class="col-md-8" style="height: 100vh;">
+      <!-- Entries Column -->
+      <div class="col-md-8">
 
+        <!-- Main Image -->
+        <img class="image" src="photo.jpeg" alt=""><br>
 
-              <style>
-.image {
-  width: 60%; /* You can use a percentage value here */
-}
-
-.bigger-text {
-  font-size: 16px;
-}
-
-</style>
-                <!-- Main Image -->
-                <img class="image" src="photo.jpeg" alt=""><br>
-
-                <div style="margin-top:3%; text-align:justify;">
-					<p>
-I’m a third year PhD student (graduating in 2024) at University College London where I’m supervised by <a href="https://alexeypokrovskiy.com">Alexey Pokrovskiy</a>. My area of research is extremal and probabilistic combinatorics. </p>
+        <div style="margin-top:3%; text-align:justify;">
+					<p>I’m a third year PhD student (graduating in 2024) at University College London where I’m supervised by <a href="https://alexeypokrovskiy.com">Alexey Pokrovskiy</a>. My area of research is extremal and probabilistic combinatorics. </p>
 
 
-<h2 id="publications">Selected works</h2>
+          <h2 id="publications">Selected works</h2>
 
-<ul class="bigger-text">
-<li class="paper" ><a href="https://arxiv.org/abs/2204.09666">A random Hall-Paige conjecture</a> (with Alexey Pokrovskiy)</li>
-<li class="paper" ><a href="https://arxiv.org/abs/2303.16157">Cycle type in Hall-Paige: A proof of the Friedlander-Gordon-Tannenbaum conjecture</a> </li>
-<p> </p>
-When can we find perfect matchings in hypergraphs whose vertices represent group elements and edges represent solutions to systems of linear equations? A prototypical problem of this type is the Hall-Paige conjecture, which asks for a characterisation of the groups whose multiplication table (viewed as a Latin square) contains a transversal. Many problems in the area have a similar flavour, yet until recently they have been approached in completely different ways, using mostly algebraic tools ranging from the combinatorial Nullstellensatz to Fourier analysis. In the first paper, we give a unified approach to attack these problems, using tools from probabilistic combinatorics. In particular, we derive that a suitably randomised version of the Hall-Paige conjecture can be used as a black-box to settle many old problems in the area for sufficiently large groups. As a by-product, we obtain the first combinatorial proof of the Hall-Paige conjecture. The second paper refines these tools further to solve a problem concerning the existence of transversals with a prescribed cycle type.
-<hr>
-<li class="paper" ><a href="https://arxiv.org/abs/2107.04629">Transversal factors and spanning trees</a> (with Richard Montgomery and Yani Pehova)</li>
-<i>Advances in Combinatorics</i>, 2022
-<li class="paper" ><a href="https://londmathsoc.onlinelibrary.wiley.com/doi/full/10.1112/blms.12896">A general approach to transversal versions of Dirac-type theorems </a> (with Pranshu Gupta, Fabian Hamann, Olaf Parczyk, and Amedeo Sgueglia)</li>
-<i>Bulletin of the London Mathematical Society</i>, 2023
-<p> </p>
-These papers investigate when the minimum degree threshold and the rainbow minimum degree threshold for the containment of a spanning structure are asymptotically the same. The second paper, building on tools from the first, gives a sufficient condition for when this happens. The condition (roughly speaking) is the existence of an absorption-based proof for the uncoloured version of the problem. Such absorption-based proofs are ubiquitous in the literature, hence this condition is easy to check for a large family of spanning structures. This yields rainbow versions of many classical results in extremal graph theory.
-<hr>
-<li class="paper" ><a href="https://arxiv.org/abs/2311.03185">Spanning trees in pseudorandom graphs via sorting networks </a> (with Joseph Hyde, Natasha Morrison, and Matías Pavez-Signé)</li>
-<p> </p>
+          <ul>
+            <li class="paper" ><a href="https://arxiv.org/abs/2204.09666">A random Hall-Paige conjecture</a> (with Alexey Pokrovskiy)</li>
+            <li class="paper" ><a href="https://arxiv.org/abs/2303.16157">
+              Cycle type in Hall-Paige: A proof of the Friedlander-Gordon-Tannenbaum conjecture</a> 
+              <p> </p>
+              <p>When can we find perfect matchings in hypergraphs whose vertices represent group elements and edges represent solutions to systems of linear equations? A prototypical problem of this type is the Hall-Paige conjecture, which asks for a characterisation of the groups whose multiplication table (viewed as a Latin square) contains a transversal. Many problems in the area have a similar flavour, yet until recently they have been approached in completely different ways, using mostly algebraic tools ranging from the combinatorial Nullstellensatz to Fourier analysis. In the first paper, we give a unified approach to attack these problems, using tools from probabilistic combinatorics. In particular, we derive that a suitably randomised version of the Hall-Paige conjecture can be used as a black-box to settle many old problems in the area for sufficiently large groups. As a by-product, we obtain the first combinatorial proof of the Hall-Paige conjecture. The second paper refines these tools further to solve a problem concerning the existence of transversals with a prescribed cycle type.</p>
+              <hr>
+            </li>
+            <li class="paper" ><a href="https://arxiv.org/abs/2107.04629">Transversal factors and spanning trees</a> (with Richard Montgomery and Yani Pehova)</li>
+              <i>Advances in Combinatorics</i>, 2022
+            </li>
+            <li class="paper" ><a href="https://londmathsoc.onlinelibrary.wiley.com/doi/full/10.1112/blms.12896">A general approach to transversal versions of Dirac-type theorems </a> (with Pranshu Gupta, Fabian Hamann, Olaf Parczyk, and Amedeo Sgueglia)
+              <p><i>Bulletin of the London Mathematical Society</i>, 2023 </p>
+              <p> </p>
+              These papers investigate when the minimum degree threshold and the rainbow minimum degree threshold for the containment of a spanning structure are asymptotically the same. The second paper, building on tools from the first, gives a sufficient condition for when this happens. The condition (roughly speaking) is the existence of an absorption-based proof for the uncoloured version of the problem. Such absorption-based proofs are ubiquitous in the literature, hence this condition is easy to check for a large family of spanning structures. This yields rainbow versions of many classical results in extremal graph theory.
+              <hr>
+            </li>
+            <li class="paper" ><a href="https://arxiv.org/abs/2311.03185">Spanning trees in pseudorandom graphs via sorting networks </a> (with Joseph Hyde, Natasha Morrison, and Matías Pavez-Signé)
+              <p> </p>
+              How pseudorandom does a graph need to be before it contains a certain spanning subgraph? This problem is not very well understood, especially in comparison to its purely random analogue. For example, the best possible condition that forces an (n,d,λ)-graph to contain a Hamilton cycle is not known, where an (n,d,λ)-graph is an n-vertex, d-regular graph such that the second largest eigenvalue (in absolute value) of the adjacency matrix is bounded above by λ. The smaller λ is, the more control we have over the edge distribution, and the easier it becomes to embed spanning subgraphs. Alon, Krivelevich, and Sudakov asked in 2007 if the mild condition "λ=o(d)" is sufficient to guarantee that an (n,d,λ)-graph contains all bounded degree spanning trees. Improving significantly on previous results, we show that this condition is sufficient up to polylogarithmic factors.
 
-How pseudorandom does a graph need to be before it contains a certain spanning subgraph? This problem is not very well understood, especially in comparison to its purely random analogue. For example, the best possible condition that forces an (n,d,λ)-graph to contain a Hamilton cycle is not known, where an (n,d,λ)-graph is an n-vertex, d-regular graph such that the second largest eigenvalue (in absolute value) of the adjacency matrix is bounded above by λ. The smaller λ is, the more control we have over the edge distribution, and the easier it becomes to embed spanning subgraphs. Alon, Krivelevich, and Sudakov asked in 2007 if the mild condition "λ=o(d)" is sufficient to guarantee that an (n,d,λ)-graph contains all bounded degree spanning trees. Improving significantly on previous results, we show that this condition is sufficient up to polylogarithmic factors.
+              Contrary to other results in the area, our proof does not rely on any absorption technique. Instead, we take a new approach based on the existence of sorting networks of logarithmic depth, as given by a celebrated construction of Ajtai, Komlós and Szemerédi. Using this construction, we show that the classical vertex-disjoint paths problem can be solved for a set of vertices fixed in advance, which might be of independent interest.
+              <hr>
+            </li>
+            <li class="paper" ><a href="https://arxiv.org/abs/2308.08535">Optimal spread for spanning subgraphs of Dirac hypergraphs </a> (with Tom Kelly and Alexey Pokrovskiy)
+              <p> </p>
 
-Contrary to other results in the area, our proof does not rely on any absorption technique. Instead, we take a new approach based on the existence of sorting networks of logarithmic depth, as given by a celebrated construction of Ajtai, Komlós and Szemerédi. Using this construction, we show that the classical vertex-disjoint paths problem can be solved for a set of vertices fixed in advance, which might be of independent interest.
-<hr>
-<li class="paper" ><a href="https://arxiv.org/abs/2308.08535">Optimal spread for spanning subgraphs of Dirac hypergraphs </a> (with Tom Kelly and Alexey Pokrovskiy)</li>
-<p> </p>
+              Let G and H be graphs on n vertices, and suppose G has large enough minimum degree to necessarily contain H as a subgraph. We show that H in fact embeds into G with good "spread". This is a common generalisation of several streams of research surrounding the classical Dirac-type problem. For example, this gives an asymptotically tight lower bound on the number of embeddings of H on G. Moreover, using the recent developments surrounding the fractional Kahn-Kalai conjecture, this result implies that many Dirac-type results hold robustly, meaning H still embeds into random sparsifications of the edge-set of G. This recovers recent results of Kang-Kelly-Kühn-Osthus-Pfenninger and Pham-Sah-Sawhney-Simkin for perfect matchings, and gives novel results for Hamilton cycles and graph factors. Our randomised embedding algorithm is simple and self-contained. Notably, the algorithm does not rely on iterative absorption or the regularity lemma, unlike similar results in the area.
+              <hr>
+            </li>
+          </ul>
 
-Let G and H be graphs on n vertices, and suppose G has large enough minimum degree to necessarily contain H as a subgraph. We show that H in fact embeds into G with good "spread". This is a common generalisation of several streams of research surrounding the classical Dirac-type problem. For example, this gives an asymptotically tight lower bound on the number of embeddings of H on G. Moreover, using the recent developments surrounding the fractional Kahn-Kalai conjecture, this result implies that many Dirac-type results hold robustly, meaning H still embeds into random sparsifications of the edge-set of G. This recovers recent results of Kang-Kelly-Kühn-Osthus-Pfenninger and Pham-Sah-Sawhney-Simkin for perfect matchings, and gives novel results for Hamilton cycles and graph factors. Our randomised embedding algorithm is simple and self-contained. Notably, the algorithm does not rely on iterative absorption or the regularity lemma, unlike similar results in the area.
-<hr>
-</ul>
+          <h2 id="publications">List of publications</h2>
 
+          <ul>
+            <li><a href="https://arxiv.org/abs/2311.03185">Spanning trees in pseudorandom graphs via sorting networks</a> <br> with Joseph Hyde, Natasha Morrison, and Matías Pavez-Signé</li><p style="margin-bottom: 5px;"></p>
+            <li><a href="https://arxiv.org/abs/2308.08535">Optimal spread for spanning subgraphs of Dirac hypergraphs</a> <br> with Tom Kelly and Alexey Pokrovskiy</li><p style="margin-bottom: 5px;"></p>
+            <li><a href="https://arxiv.org/abs/2303.16157">Cycle type in Hall-Paige: A proof of the Friedlander-Gordon-Tannenbaum conjecture</a></li> <p style="margin-bottom: 5px;"></p>
+            <li><a href="https://londmathsoc.onlinelibrary.wiley.com/doi/full/10.1112/blms.12896">A general approach to transversal versions of Dirac-type theorems</a> <br> <em>Bulletin of the London Mathematical Society</em>, 2023 <br>with Pranshu Gupta, Fabian Hamann, Olaf Parczyk, and Amedeo Sgueglia</li><p style="margin-bottom: 5px;"></p>
+            <li> <a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v30i3p10/pdf"> Splitting matchings and the Ryser-Brualdi-Stein conjecture for multisets</a> <br>
+              <em>Electronic Journal of Combinatorics</em>, 2023 <br>
+              with Michael Anastos, David Fabian, and Tibor Szabó</li><p style="margin-bottom: 5px;"></p>
+            <li><a href="https://arxiv.org/abs/2204.09666">A random Hall-Paige conjecture</a> <br> with Alexey Pokrovskiy</li><p style="margin-bottom: 5px;"></p>
+            <li><a href="https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/unavoidable-patterns-in-locally-balanced-colourings/8C1CC0D03AE2F08C2F13117AC6E86ED3">Unavoidable patterns in locally balanced colorings</a>  <br>
+              <em>Combinatorics, Probability, and Computing</em>, 2023 <br>
+              with Nina Kamčev</li><p style="margin-bottom: 5px;"></p>
+            <li><a href="https://arxiv.org/abs/2107.04629">Transversal factors and spanning trees</a> <br> <em>Advances in Combinatorics</em>, 2022 <br> with Richard Montgomery and Yani Pehova</li> <p style="margin-bottom: 5px;"></p>
+            <li><a href="https://arxiv.org/abs/2010.02953">On a colored Turán problem of Diwan and Mubayi</a> <br> <em>Discrete Mathematics</em>, 2022 <br>
+              with Ander Lamaison and Michael Tait</li> <p style="margin-bottom: 5px;"></p>
+            <li><a href="https://arxiv.org/abs/2004.07147">Turán and Ramsey-type results for unavoidable subgraphs</a> <br> <em>Journal of Graph Theory</em>, 2022 <br> with Michael Tait </li> <p style="margin-bottom: 5px;"></p>
+            <li><a href="https://arxiv.org/abs/1912.06302">Colored unavoidable patterns and balanceable graphs</a> <br>
+              with Matt Bowen, Adriana Hansberg, and Amanda Montejano </li><p style="margin-bottom: 5px;"></p>
+            <li><a href="https://arxiv.org/abs/1807.02780">Finding unavoidable colorful patterns in multicolored graphs</a> <br>  <em>Electronic Journal of Combinatorics</em>, 2020 <br>
+              with Matt Bowen and Ander Lamaison </li><p style="margin-bottom: 5px;"></p>
+              <li><a href="https://nbdt.scholasticahq.com/article/13477-combining-imagination-and-heuristics-to-learn-strategies-that-generalize">Combining imagination and heuristics to learn strategies that generalize</a> <br> <em>Neurons, Behavior, Data Analysis, and Theory</em>, 2020 <br>
+                with Kyle Dunovan, Erik Peterson and Timothy Verstynen </li><p style="margin-bottom: 5px;"></p>
+            <li><a href="https://arxiv.org/abs/1802.08700">The Sprague-Grundy function for some selective compound games</a> <br> <em>Integers</em>, 2020 <br>
+              with Calvin Beideman and Matt Bowen</li>
+          </ul>
 
-<h2 id="publications">List of publications</h2>
+        </div>
+      </div>
 
-<ul>
-  <li><a href="https://arxiv.org/abs/2311.03185">Spanning trees in pseudorandom graphs via sorting networks</a> <br> with Joseph Hyde, Natasha Morrison, and Matías Pavez-Signé</li><p style="margin-bottom: 5px;"></p>
-  <li><a href="https://arxiv.org/abs/2308.08535">Optimal spread for spanning subgraphs of Dirac hypergraphs</a> <br> with Tom Kelly and Alexey Pokrovskiy</li><p style="margin-bottom: 5px;"></p>
-  <li><a href="https://arxiv.org/abs/2303.16157">Cycle type in Hall-Paige: A proof of the Friedlander-Gordon-Tannenbaum conjecture</a></li> <p style="margin-bottom: 5px;"></p>
-  <li><a href="https://londmathsoc.onlinelibrary.wiley.com/doi/full/10.1112/blms.12896">A general approach to transversal versions of Dirac-type theorems</a> <br> <em>Bulletin of the London Mathematical Society</em>, 2023 <br>with Pranshu Gupta, Fabian Hamann, Olaf Parczyk, and Amedeo Sgueglia</li><p style="margin-bottom: 5px;"></p>
-  <li> <a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v30i3p10/pdf"> Splitting matchings and the Ryser-Brualdi-Stein conjecture for multisets</a> <br>
-    <em>Electronic Journal of Combinatorics</em>, 2023 <br>
-    with Michael Anastos, David Fabian, and Tibor Szabó</li><p style="margin-bottom: 5px;"></p>
-  <li><a href="https://arxiv.org/abs/2204.09666">A random Hall-Paige conjecture</a> <br> with Alexey Pokrovskiy</li><p style="margin-bottom: 5px;"></p>
-  <li><a href="https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/unavoidable-patterns-in-locally-balanced-colourings/8C1CC0D03AE2F08C2F13117AC6E86ED3">Unavoidable patterns in locally balanced colorings</a>  <br>
-    <em>Combinatorics, Probability, and Computing</em>, 2023 <br>
-    with Nina Kamčev</li><p style="margin-bottom: 5px;"></p>
-  <li><a href="https://arxiv.org/abs/2107.04629">Transversal factors and spanning trees</a> <br> <em>Advances in Combinatorics</em>, 2022 <br> with Richard Montgomery and Yani Pehova</li> <p style="margin-bottom: 5px;"></p>
-  <li><a href="https://arxiv.org/abs/2010.02953">On a colored Turán problem of Diwan and Mubayi</a> <br> <em>Discrete Mathematics</em>, 2022 <br>
-    with Ander Lamaison and Michael Tait</li> <p style="margin-bottom: 5px;"></p>
-  <li><a href="https://arxiv.org/abs/2004.07147">Turán and Ramsey-type results for unavoidable subgraphs</a> <br> <em>Journal of Graph Theory</em>, 2022 <br> with Michael Tait </li> <p style="margin-bottom: 5px;"></p>
-  <li><a href="https://arxiv.org/abs/1912.06302">Colored unavoidable patterns and balanceable graphs</a> <br>
-    with Matt Bowen, Adriana Hansberg, and Amanda Montejano </li><p style="margin-bottom: 5px;"></p>
-  <li><a href="https://arxiv.org/abs/1807.02780">Finding unavoidable colorful patterns in multicolored graphs</a> <br>  <em>Electronic Journal of Combinatorics</em>, 2020 <br>
-    with Matt Bowen and Ander Lamaison </li><p style="margin-bottom: 5px;"></p>
-    <li><a href="https://nbdt.scholasticahq.com/article/13477-combining-imagination-and-heuristics-to-learn-strategies-that-generalize">Combining imagination and heuristics to learn strategies that generalize</a> <br> <em>Neurons, Behavior, Data Analysis, and Theory</em>, 2020 <br>
-      with Kyle Dunovan, Erik Peterson and Timothy Verstynen </li><p style="margin-bottom: 5px;"></p>
-  <li><a href="https://arxiv.org/abs/1802.08700">The Sprague-Grundy function for some selective compound games</a> <br> <em>Integers</em>, 2020 <br>
-    with Calvin Beideman and Matt Bowen.</li>
-</ul>
-
-
-
-<p>
-  </a>.</p>
-
-
-                </div>
-            </div>
-
-            <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Alp Müyesser</b></div><br>
-                <p><b>alp.muyesser.21@ucl.ac.uk</b><br>
-                <p>PhD Candidate<br>
-                  <p>Department of Mathematics<br>
-                University College London<br>
-
-                </p>
-            </div>
-
-
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:0%">
-              <dd><a href="https://scholar.google.com/citations?user=Om_b6RYAAAAJ&hl=en">Google Scholar</a></dd>
-              <dd><a href="https://arxiv.org/search/?query=alp+Muyesser&searchtype=all&source=header">arXiv</a></dd>
-            </div>
-
-
-
-
-
+      <!-- Contact Info on the Sidebar -->
+      <div class="col-md-4" style="margin-top:0%">
+        <div>
+          <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Alp Müyesser</b></div>
+          <br>
+          <p><b>alp.muyesser.21@ucl.ac.uk</b><br></p>
+          <p>PhD Candidate<br></p>
+          <p>Department of Mathematics<br>
+            University College London<br>
+          </p>
         </div>
 
 
+        <!-- Links on the Sidebar -->
+        <div>
+          <dd><a href="https://scholar.google.com/citations?user=Om_b6RYAAAAJ&hl=en">Google Scholar</a></dd>
+          <dd><a href="https://arxiv.org/search/?query=alp+Muyesser&searchtype=all&source=header">arXiv</a></dd>
+        </div>
+
+        <br>
+      </div>
+    
     </div>
+
+  </div>
     <!-- /.container -->
-
-
 
 </body>
 
