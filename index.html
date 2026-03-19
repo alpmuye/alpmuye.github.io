@@ -1,180 +1,401 @@
 <!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
 <html lang="en">
 <head>
   <title>Alp Müyesser</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
-    .image {
-      width: 60%; /* You can use a percentage value here */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f5f0e8;
+      --ink: #1a1814;
+      --muted: #6b6559;
+      --rule: #d6cfc2;
+      --accent: #2d5a4f;
     }
 
-    .bigger-text {
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.75;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 80px 32px 120px;
+    }
+
+    /* TOP */
+    .top {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .top img {
+      width: 65%;
+      max-height: 420px;
+      object-fit: cover;
+      object-position: center 14%;
+      display: block;
+      margin: 0 auto 24px;
+      filter: grayscale(10%);
+    }
+
+    .top-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .top-text h1 {
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .top-text .affil {
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    .top-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 4px;
+      flex-wrap: wrap;
+    }
+
+    .top-text .email {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--accent);
+    }
+
+    .top-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .top-links a {
+      font-family: 'Jost', sans-serif;
+      font-size: 11.5px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 1px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .top-links a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* BODY TEXT */
+    p {
+      font-weight: 300;
+      color: #302e2a;
+      margin-bottom: 18px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      text-underline-offset: 3px;
+      transition: text-decoration-color 0.2s;
+    }
+
+    a:hover { text-decoration-color: var(--accent); }
+
+    /* SECTION HEADERS */
+    h2 {
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 56px 0 0;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    /* PUBLICATION LIST */
+    .pub-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .pub-list li {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 19px;
+      font-weight: 300;
+      line-height: 1.55;
+    }
+
+    .pub-list li a {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.15s;
+    }
+
+    .pub-list li a:hover { color: var(--accent); }
+
+    .venue {
+      display: block;
+      font-style: italic;
+      color: var(--muted);
       font-size: 16px;
+      margin-top: 3px;
     }
 
-    .no-style em {
-    font-style: normal;
-  }
+    .venue b {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--accent);
+    }
 
-  .responsive-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
+    .authors {
+      display: block;
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--muted);
+      margin-top: 2px;
+    }
 
-    </style>
+    .quanta {
+      display: block;
+      font-family: 'Jost', sans-serif;
+      font-size: 12.5px;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .quanta a { color: var(--muted); }
+  </style>
 </head>
+<body>
 
-<body class="bigger-text">
-
-<!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		  <div class="navbar-header">
-		    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		  </div>
-
-		  <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <!--  <li><a href="index.html">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#">CV</a></li> -->
-        </ul>
-      </div>
-	  </div>
-	</nav>
-
-  <!-- Page Content -->
-  <div class="container">
-
-    <div class="row">
-
-      <!-- Entries Column -->
-      <div class="col-md-8">
-
-        <!-- Main Image -->
-        <img class="image" src="photo-3-2.jpeg" alt="" style="width:60%;height:auto;" class="responsive-image"><br>
-
-        <div style="margin-top:3%; text-align:justify;" class="no-style" >
-					<p> I am a Junior Research Fellow at New College, University of Oxford. I completed my PhD at the University College London in 2024 where I was supervised by <a href="https://alexeypokrovskiy.com">Alexey Pokrovskiy</a>. I'm broadly interested in probabilistic, extremal, and additive aspects of combinatorics, as well as interactions with group theory, graph theory, and theoretical computer science. </p>
-
-          <p> You can find here my <a href="#list"> list of publications</a>. Below are some highlights. Here are also some (fairly incomplete) <a href="Notes_on_absorption.pdf"> lecture notes</a> on the absorption method based on a recent graduate course.
-
-          <h2 id="publications">Selected works</h2>
-
-          <ul>
-
-<li><a href="https://arxiv.org/abs/2508.18254" target="_blank">On Graham's rearrangement conjecture over <span style="font-family: serif;">𝔽</span><sub>2</sub><sup></sup></a> <br> with Benjamin Bedert, Matija Bucić, Noah Kravitz, and Richard Montgomery</li><p style="margin-bottom: 5px;"></p>
-
-<li><a href="https://arxiv.org/abs/2204.09666">A random Hall–Paige conjecture</a> <br> <b><b>Inventiones Mathematicae</b></b>, 2025 <br> with Alexey Pokrovskiy</li><p style="margin-bottom: 5px;"></p>
-
-<li><a href="https://arxiv.org/abs/2311.03185">Spanning trees in pseudorandom graphs via sorting networks</a> <br> <b><b>Proceedings of the American Mathematical Society</b></b>, 2025 <br>(also mentioned in a <a href="https://www.quantamagazine.org/in-highly-connected-networks-theres-always-a-loop-20240607/">Quanta article</a>) <br> with Joseph Hyde, Natasha Morrison, and Matías Pavez-Signé</li>  <p style="margin-bottom: 5px;"></p>
-
-<li><a href="https://arxiv.org/abs/2503.01825">Towards Graham's rearrangement conjecture via rainbow paths</a> <br> with Matija Bucić, Bryce Frederickson, Alexey Pokrovskiy, and Liana Yepremyan</li><b><b>Advances in Mathematics</b></b>, to appear <br><p style="margin-bottom: 5px;"></p>
-
-<li><a href="https://arxiv.org/abs/2406.02514">Approximate path decompositions of regular graphs</a> <br><b><b>Journal of the London Mathematical Society</b></b>, 2025 <br> with Richard Montgomery, Alexey Pokrovskiy, and Benny Sudakov</li><p style="margin-bottom: 5px;"></p>
-
-</ul>
-<hr>
-
-          <h2 id="list">List of publications</h2>
-
-<ul>
-  <li><a href="https://arxiv.org/abs/2509.05280" target="_blank">On the Graham-Sloane harmonious labelling conjecture</a> <br> with Alexey Pokrovskiy</li><p style="margin-bottom: 5px;"></p>
-<li><a href="https://arxiv.org/abs/2508.18254" target="_blank">On Graham's rearrangement conjecture over <span style="font-family: serif;">𝔽</span><sub>2</sub><sup></sup></a> <br> with Benjamin Bedert, Matija Bucić, Noah Kravitz, and Richard Montgomery</li><p style="margin-bottom: 5px;"></p>
-	
-          <li><a href="https://arxiv.org/abs/2507.20500">New bounds for linear arboricity and related problems</a> <br> with Micha Christoph, Nemanja Draganić, António Girão, Eoin Hurley, and Lukas Michel </li><p style="margin-bottom: 5px;"></p>
-          <li><a href="https://arxiv.org/abs/2507.19417">Cycle-factors of regular graphs via entropy</a> <br><b><b>FOCS</b></b>, 2025  <br> with Micha Christoph, Nemanja Draganić, António Girão, Eoin Hurley, and Lukas Michel </li><p style="margin-bottom: 5px;"></p>
-
-
-            <li><a href="https://arxiv.org/abs/2503.01826">Cyclic subsets in regular Dirac graphs</a> <br><b><b>IMRN</b></b>, 2025<br> with Nemanja Draganić and Peter Keevash </li><p style="margin-bottom: 5px;"></p>
-      <li><a href="https://arxiv.org/abs/2503.01825">Towards Graham's rearrangement conjecture via rainbow paths</a> <br> with Matija Bucić, Bryce Frederickson, Alexey Pokrovskiy, and Liana Yepremyan</li><b><b>Advances in Mathematics</b></b>, to appear <br><p style="margin-bottom: 5px;"></p>
-            <li><a href="https://arxiv.org/abs/2409.06640">Random embeddings of bounded degree trees with optimal spread</a><br>
-              <b>Combinatorics, Probability, and Computing</b>, 2025 <br> with Paul Bastide and Clément Legrand-Duchesne</li><p style="margin-bottom: 5px;"></p>
-            <li><a href="https://arxiv.org/abs/2407.10565">Topological minors in typical lifts</a> <br> with Matija Bucić, Micha Christoph, and Raphael Steiner</li><p style="margin-bottom: 5px;"></p>
-          <li><a href="https://arxiv.org/abs/2407.06275">Spanning spheres in Dirac hypergraphs</a> <br><b><b>Combinatorica</b></b>, 2025 <br> with Freddie Illingworth, Richard Lang, Olaf Parczyk, and Amedeo Sgueglia</li><p style="margin-bottom: 5px;"></p>
-          <li><a href="https://arxiv.org/abs/2406.02514">Approximate path decompositions of regular graphs</a> <br> <b>Journal of the London Mathematical Society</b>, 2025<br> with Richard Montgomery, Alexey Pokrovskiy, and Benny Sudakov</li><p style="margin-bottom: 5px;"></p>
-            <li><a href="https://arxiv.org/abs/2311.03185">Spanning trees in pseudorandom graphs via sorting networks</a> <br> <b>Proceedings of the American Mathematical Society</b>, 2025  <br> with Joseph Hyde, Natasha Morrison, and Matías Pavez-Signé</li><p style="margin-bottom: 5px;"></p>
-              <li><a href="https://arxiv.org/abs/2204.09666">A random Hall-Paige conjecture</a> <br> <b>Inventiones Mathematicae</b>, 2025 <br> with Alexey Pokrovskiy</li><p style="margin-bottom: 5px;"></p>
-            <li><a href="https://arxiv.org/abs/2308.08535">Optimal spread for spanning subgraphs of Dirac hypergraphs</a> <br> <b>Journal of Combinatorial Theory, Series B</b>, 2024 <br> with Tom Kelly and Alexey Pokrovskiy</li><p style="margin-bottom: 5px;"></p>
-            <li><a href="https://arxiv.org/abs/2303.16157">Cycle type in Hall–Paige: A proof of the Friedlander–Gordon–Tannenbaum conjecture</a></li><b><b>Forum of Mathematics, Sigma</b></b>, to appear <br> <p style="margin-bottom: 5px;"></p>
-            <li><a href="https://londmathsoc.onlinelibrary.wiley.com/doi/full/10.1112/blms.12896">A general approach to transversal versions of Dirac-type theorems</a> <br> <b>Bulletin of the London Mathematical Society</b>, 2023 <br>with Pranshu Gupta, Fabian Hamann, Olaf Parczyk, and Amedeo Sgueglia</li><p style="margin-bottom: 5px;"></p>
-            <li> <a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v30i3p10/pdf"> Splitting matchings and the Ryser-Brualdi-Stein conjecture for multisets</a> <br>
-              <b>Electronic Journal of Combinatorics</b>, 2023 <br>
-              with Michael Anastos, David Fabian, and Tibor Szabó</li><p style="margin-bottom: 5px;"></p>
-            <li><a href="https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/unavoidable-patterns-in-locally-balanced-colourings/8C1CC0D03AE2F08C2F13117AC6E86ED3">Unavoidable patterns in locally balanced colorings</a>  <br>
-              <b>Combinatorics, Probability, and Computing</b>, 2023 <br>
-              with Nina Kamčev</li><p style="margin-bottom: 5px;"></p>
-            <li><a href="https://arxiv.org/abs/2107.04629">Transversal factors and spanning trees</a> <br> <b>Advances in Combinatorics</b>, 2022 <br> with Richard Montgomery and Yani Pehova</li> <p style="margin-bottom: 5px;"></p>
-            <li><a href="https://arxiv.org/abs/2010.02953">On a colored Turán problem of Diwan and Mubayi</a> <br> <b>Discrete Mathematics</b>, 2022 <br>
-              with Ander Lamaison and Michael Tait</li> <p style="margin-bottom: 5px;"></p>
-            <li><a href="https://arxiv.org/abs/2004.07147">Turán and Ramsey-type results for unavoidable subgraphs</a> <br> <b>Journal of Graph Theory</b>, 2022 <br> with Michael Tait </li> <p style="margin-bottom: 5px;"></p>
-            <li><a href="https://arxiv.org/abs/1912.06302">Colored unavoidable patterns and balanceable graphs</a> <br> <b>Electronic Journal of Combinatorics</b>, 2023 <br>
-              with Matt Bowen, Adriana Hansberg, and Amanda Montejano </li><p style="margin-bottom: 5px;"></p>
-            <li><a href="https://arxiv.org/abs/1807.02780">Finding unavoidable colorful patterns in multicolored graphs</a> <br>  <b>Electronic Journal of Combinatorics</b>, 2020 <br>
-              with Matt Bowen and Ander Lamaison </li><p style="margin-bottom: 5px;"></p>
-              <li><a href="https://nbdt.scholasticahq.com/article/13477-combining-imagination-and-heuristics-to-learn-strategies-that-generalize">Combining imagination and heuristics to learn strategies that generalize</a> <br> <b>Neurons, Behavior, Data Analysis, and Theory</b>, 2020 <br>
-                with Kyle Dunovan, Erik Peterson and Timothy Verstynen </li><p style="margin-bottom: 5px;"></p>
-            <li><a href="https://arxiv.org/abs/1802.08700">The Sprague-Grundy function for some selective compound games</a> <br> <b>Integers</b>, 2020 <br>
-              with Calvin Beideman and Matt Bowen</li>
-
-</ul>
-          </div>
-          </div>
-
-
-
-
-
-
-
-
-      <!-- Contact Info on the Sidebar -->
-      <div class="col-md-4" style="margin-top:0%">
-        <div>
-          <div style="font-size: 32px;"><b>Alp Müyesser</b></div>
-
-
-          <p>G.H. Hardy Junior Research Fellow<br></p>
-          <p>New College<br>
-            University of Oxford<br>
-          </p>
-          <p><b>alp.muyesser@new.ox.ac.uk</b><br></p>
+  <div class="top">
+    <img src="photo-3-2.jpeg" alt="Alp Müyesser">
+    <div class="top-text">
+      <h1>Alp Müyesser</h1>
+      <div class="affil">G.H. Hardy Junior Research Fellow &nbsp;&middot;&nbsp; New College, University of Oxford</div>
+      <div class="top-meta">
+        <span class="email">alp.muyesser@new.ox.ac.uk</span>
+        <div class="top-links">
+          <a href="https://scholar.google.com/citations?user=Om_b6RYAAAAJ&hl=en">Google Scholar</a>
+          <a href="https://arxiv.org/search/?query=alp+Muyesser&searchtype=all&source=header">arXiv</a>
         </div>
-
-
-        <!-- Links on the Sidebar -->
-        <div>
-          <dd><a href="https://scholar.google.com/citations?user=Om_b6RYAAAAJ&hl=en">Google Scholar</a></dd>
-          <dd><a href="https://arxiv.org/search/?query=alp+Muyesser&searchtype=all&source=header">arXiv</a></dd>
-        </div>
-
-        <br>
       </div>
-
     </div>
-
   </div>
-    <!-- /.container -->
+
+  <p>I am a Junior Research Fellow at New College, University of Oxford. I completed my PhD at the University College London in 2024 where I was supervised by <a href="https://alexeypokrovskiy.com">Alexey Pokrovskiy</a>. I'm broadly interested in probabilistic, extremal, and additive aspects of combinatorics, as well as interactions with group theory, graph theory, and theoretical computer science.</p>
+
+  <p> Here are some (incomplete) <a href="Notes_on_absorption.pdf">lecture notes</a> on the absorption method based on a recent graduate course.</p>
+
+  <h2 id="publications">Selected works</h2>
+
+  <ul class="pub-list">
+
+    <li>
+      <a href="https://arxiv.org/abs/2508.18254" target="_blank">On Graham's rearrangement conjecture over &#x1D53D;<sub>2</sub><sup style="position:relative; left:-0.3em;">n</sup></a>
+      <span class="authors">with Benjamin Bedert, Matija Buci&#x107;, Noah Kravitz, and Richard Montgomery</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2204.09666">A random Hall&ndash;Paige conjecture</a>
+      <span class="venue"><b>Inventiones Mathematicae</b>, 2025</span>
+      <span class="authors">with Alexey Pokrovskiy</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2311.03185">Spanning trees in pseudorandom graphs via sorting networks</a>
+      <span class="venue"><b>Proceedings of the American Mathematical Society</b>, 2025</span>
+      <span class="authors">with Joseph Hyde, Natasha Morrison, and Mat&iacute;as Pavez-Sign&eacute;</span>
+      <span class="quanta">(also mentioned in a <a href="https://www.quantamagazine.org/in-highly-connected-networks-theres-always-a-loop-20240607/">Quanta article</a>)</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2503.01825">Towards Graham's rearrangement conjecture via rainbow paths</a>
+      <span class="venue"><b>Advances in Mathematics</b>, 2026</span>
+      <span class="authors">with Matija Buci&#x107;, Bryce Frederickson, Alexey Pokrovskiy, and Liana Yepremyan</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2406.02514">Approximate path decompositions of regular graphs</a>
+      <span class="venue"><b>Journal of the London Mathematical Society</b>, 2025</span>
+      <span class="authors">with Richard Montgomery, Alexey Pokrovskiy, and Benny Sudakov</span>
+    </li>
+
+  </ul>
+
+  <h2 id="list">List of publications</h2>
+
+  <ul class="pub-list">
+
+    <li>
+      <a href="https://arxiv.org/abs/2509.05280" target="_blank">On the Graham-Sloane harmonious labelling conjecture</a>
+      <span class="authors">with Alexey Pokrovskiy</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2508.18254" target="_blank">On Graham's rearrangement conjecture over &#x1D53D;<sub>2</sub><sup style="position:relative; left:-0.3em;">n</sup></a>
+      <span class="authors">with Benjamin Bedert, Matija Buci&#x107;, Noah Kravitz, and Richard Montgomery</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2507.20500">New bounds for linear arboricity and related problems</a>
+      <span class="authors">with Micha Christoph, Nemanja Dragani&#x107;, Ant&oacute;nio Gir&atilde;o, Eoin Hurley, and Lukas Michel</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2507.19417">Cycle-factors of regular graphs via entropy</a>
+      <span class="venue"><b>FOCS</b>, 2025</span>
+      <span class="authors">with Micha Christoph, Nemanja Dragani&#x107;, Ant&oacute;nio Gir&atilde;o, Eoin Hurley, and Lukas Michel</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2503.01826">Cyclic subsets in regular Dirac graphs</a>
+      <span class="venue"><b>IMRN</b>, 2025</span>
+      <span class="authors">with Nemanja Dragani&#x107; and Peter Keevash</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2503.01825">Towards Graham's rearrangement conjecture via rainbow paths</a>
+      <span class="venue"><b>Advances in Mathematics</b>, to appear</span>
+      <span class="authors">with Matija Buci&#x107;, Bryce Frederickson, Alexey Pokrovskiy, and Liana Yepremyan</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2409.06640">Random embeddings of bounded degree trees with optimal spread</a>
+      <span class="venue"><b>Combinatorics, Probability, and Computing</b>, 2025</span>
+      <span class="authors">with Paul Bastide and Cl&eacute;ment Legrand-Duchesne</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2407.10565">Topological minors in typical lifts</a>
+      <span class="authors">with Matija Buci&#x107;, Micha Christoph, and Raphael Steiner</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2407.06275">Spanning spheres in Dirac hypergraphs</a>
+      <span class="venue"><b>Combinatorica</b>, 2025</span>
+      <span class="authors">with Freddie Illingworth, Richard Lang, Olaf Parczyk, and Amedeo Sgueglia</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2406.02514">Approximate path decompositions of regular graphs</a>
+      <span class="venue"><b>Journal of the London Mathematical Society</b>, 2025</span>
+      <span class="authors">with Richard Montgomery, Alexey Pokrovskiy, and Benny Sudakov</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2311.03185">Spanning trees in pseudorandom graphs via sorting networks</a>
+      <span class="venue"><b>Proceedings of the American Mathematical Society</b>, 2025</span>
+      <span class="authors">with Joseph Hyde, Natasha Morrison, and Mat&iacute;as Pavez-Sign&eacute;</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2204.09666">A random Hall-Paige conjecture</a>
+      <span class="venue"><b>Inventiones Mathematicae</b>, 2025</span>
+      <span class="authors">with Alexey Pokrovskiy</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2308.08535">Optimal spread for spanning subgraphs of Dirac hypergraphs</a>
+      <span class="venue"><b>Journal of Combinatorial Theory, Series B</b>, 2024</span>
+      <span class="authors">with Tom Kelly and Alexey Pokrovskiy</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2303.16157">Cycle type in Hall&ndash;Paige: A proof of the Friedlander&ndash;Gordon&ndash;Tannenbaum conjecture</a>
+      <span class="venue"><b>Forum of Mathematics, Sigma</b>, to appear</span>
+    </li>
+
+    <li>
+      <a href="https://londmathsoc.onlinelibrary.wiley.com/doi/full/10.1112/blms.12896">A general approach to transversal versions of Dirac-type theorems</a>
+      <span class="venue"><b>Bulletin of the London Mathematical Society</b>, 2023</span>
+      <span class="authors">with Pranshu Gupta, Fabian Hamann, Olaf Parczyk, and Amedeo Sgueglia</span>
+    </li>
+
+    <li>
+      <a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v30i3p10/pdf">Splitting matchings and the Ryser-Brualdi-Stein conjecture for multisets</a>
+      <span class="venue"><b>Electronic Journal of Combinatorics</b>, 2023</span>
+      <span class="authors">with Michael Anastos, David Fabian, and Tibor Szab&oacute;</span>
+    </li>
+
+    <li>
+      <a href="https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/unavoidable-patterns-in-locally-balanced-colourings/8C1CC0D03AE2F08C2F13117AC6E86ED3">Unavoidable patterns in locally balanced colorings</a>
+      <span class="venue"><b>Combinatorics, Probability, and Computing</b>, 2023</span>
+      <span class="authors">with Nina Kam&#x10D;ev</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2107.04629">Transversal factors and spanning trees</a>
+      <span class="venue"><b>Advances in Combinatorics</b>, 2022</span>
+      <span class="authors">with Richard Montgomery and Yani Pehova</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2010.02953">On a colored Tur&aacute;n problem of Diwan and Mubayi</a>
+      <span class="venue"><b>Discrete Mathematics</b>, 2022</span>
+      <span class="authors">with Ander Lamaison and Michael Tait</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/2004.07147">Tur&aacute;n and Ramsey-type results for unavoidable subgraphs</a>
+      <span class="venue"><b>Journal of Graph Theory</b>, 2022</span>
+      <span class="authors">with Michael Tait</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/1912.06302">Colored unavoidable patterns and balanceable graphs</a>
+      <span class="venue"><b>Electronic Journal of Combinatorics</b>, 2023</span>
+      <span class="authors">with Matt Bowen, Adriana Hansberg, and Amanda Montejano</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/1807.02780">Finding unavoidable colorful patterns in multicolored graphs</a>
+      <span class="venue"><b>Electronic Journal of Combinatorics</b>, 2020</span>
+      <span class="authors">with Matt Bowen and Ander Lamaison</span>
+    </li>
+
+    <li>
+      <a href="https://nbdt.scholasticahq.com/article/13477-combining-imagination-and-heuristics-to-learn-strategies-that-generalize">Combining imagination and heuristics to learn strategies that generalize</a>
+      <span class="venue"><b>Neurons, Behavior, Data Analysis, and Theory</b>, 2020</span>
+      <span class="authors">with Kyle Dunovan, Erik Peterson and Timothy Verstynen</span>
+    </li>
+
+    <li>
+      <a href="https://arxiv.org/abs/1802.08700">The Sprague-Grundy function for some selective compound games</a>
+      <span class="venue"><b>Integers</b>, 2020</span>
+      <span class="authors">with Calvin Beideman and Matt Bowen</span>
+    </li>
+
+  </ul>
 
 </body>
-
 </html>
