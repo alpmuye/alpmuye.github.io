@@ -11,7 +11,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream: #f5f0e8;
+      --cream: #ffffff;
       --ink: #1a1814;
       --muted: #6b6559;
       --rule: #d6cfc2;
@@ -193,9 +193,21 @@
     }
 
     .quanta a { color: var(--muted); }
+  
+    [hidden] { display: none !important; }
+    .site-nav { display: flex; justify-content: center; gap: 24px; margin: 0 0 36px; font-family: 'Jost', sans-serif; font-size: 14px; }
+    .site-nav a[aria-current="page"] { color: var(--ink); text-decoration-color: var(--rule); }
+    h3 { font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; margin: 30px 0 8px; color: var(--accent); }
+    .section-intro { margin-top: 14px; }
+    .export-tools { margin-top: 36px; font-family: 'Jost', sans-serif; font-size: 13px; color: var(--muted); }
+    .export-tools button { font: inherit; color: var(--accent); background: white; border: 1px solid var(--rule); padding: 8px 12px; cursor: pointer; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    @media (max-width: 480px) { body { padding: 40px 22px 72px; } .top img { width: 85%; } .top-meta { gap: 12px; } }
   </style>
 </head>
 <body>
+<nav class="site-nav" aria-label="Main navigation"><a href="#home" data-home aria-current="page">Home</a><a href="#publications" data-publications>Publications</a></nav><main>
+<section id="home-view">
 
   <div class="top">
     <img src="photo-3-2.jpeg" alt="Alp Müyesser">
@@ -216,171 +228,285 @@
 
   <p> Here are some (incomplete) <a href="Notes_on_absorption.pdf">lecture notes</a> on the absorption method based on a recent graduate course.</p>
 
-  <h2 id="list">Publications</h2>
-
-  <ul class="pub-list">
-
-    <li>
-     <a href="hamiltonicity_final.pdf" target="_blank">Hamiltonicity of mildly pseudorandom regular graphs</a>
-   </li>
-
-    <li>
-     <a href="https://arxiv.org/abs/2607.02483" target="_blank">Robustness and hyperstability for the Erdős-Gallai theorem</a>
-     <span class="authors">with Micha Christoph and Yuval Wigderson</span>
-   </li>
-
-    <li>
-     <a href="https://arxiv.org/abs/2606.07471" target="_blank">Dirac subgraphs of powers of cycles are Hamiltonian</a>
-     <span class="authors">with Richard Land, Mathias Schacht, and Carl Schildkraut</span>
-   </li>
-
-     <li>
-      <a href="https://arxiv.org/abs/2603.08675" target="_blank">The Lovász conjecture holds for moderately dense Cayley graphs</a><span class="venue"><b>FOCS</b>, 2026</span>
-      <span class="authors">with Benjamin Bedert, Nemanja Dragani&#x107;, and Mat&iacute;as Pavez-Sign&eacute;</span>
-    </li>
-
-    <li>
-      <a href="https://arxiv.org/abs/2509.05280" target="_blank">On the Graham-Sloane harmonious labelling conjecture</a>
+  <h2 id="selected">Selected publications by topic</h2>
+<p class="section-intro"><a href="#publications" data-publications>View all publications &rarr;</a></p>
+<section>
+<h3>Probabilistic combinatorics, graph labelling and rearrangements</h3>
+<ul class="pub-list">
+<li>
+      <a href="https://arxiv.org/abs/2204.09666">A random Hall-Paige conjecture</a>
+      <span class="venue"><b>Inventiones Mathematicae</b>, 2025</span>
       <span class="authors">with Alexey Pokrovskiy</span>
     </li>
-
-    <li>
+<li>
+      <a href="https://arxiv.org/abs/2509.05280" target="_blank">On the Graham-Sloane harmonious labelling conjecture</a>
+      <span class="venue"><b>Compositio Mathematica</b>, to appear</span>
+      <span class="authors">with Alexey Pokrovskiy</span>
+    </li>
+<li>
       <a href="https://arxiv.org/abs/2508.18254" target="_blank">On Graham's rearrangement conjecture over &#x1D53D;<sub>2</sub><sup style="position:relative; left:-0.3em;">n</sup></a>
       <span class="authors">with Benjamin Bedert, Matija Buci&#x107;, Noah Kravitz, and Richard Montgomery</span>
+      <span class="quanta">(mentioned in a <a href="https://www.quantamagazine.org/mathematicians-harness-randomness-to-crack-a-55-year-old-conjecture-20260928/">Quanta article</a>)</span>
     </li>
-
-    <li>
-      <a href="https://arxiv.org/abs/2507.20500">New bounds for linear arboricity and related problems</a><span class="venue"><b>Journal of the European Mathematical Society</b>, to appear</span>
-      <span class="authors">with Micha Christoph, Nemanja Dragani&#x107;, Ant&oacute;nio Gir&atilde;o, Eoin Hurley, and Lukas Michel</span>
-    </li>
-
-    <li>
-      <a href="https://arxiv.org/abs/2507.19417">Cycle-factors of regular graphs via entropy</a><span class="venue"><b>FOCS</b>, 2025</span>
-      <span class="authors">with Micha Christoph, Nemanja Dragani&#x107;, Ant&oacute;nio Gir&atilde;o, Eoin Hurley, and Lukas Michel</span>
-    </li>
-
-    <li>
-      <a href="https://arxiv.org/abs/2503.01826">Cyclic subsets in regular Dirac graphs</a>
-      <span class="venue"><b>IMRN</b>, 2025</span>
-      <span class="authors">with Nemanja Dragani&#x107; and Peter Keevash</span>
-    </li>
-
-    <li>
+<li>
       <a href="https://arxiv.org/abs/2503.01825">Towards Graham's rearrangement conjecture via rainbow paths</a>
       <span class="venue"><b>Advances in Mathematics</b>, 2026</span>
       <span class="authors">with Matija Buci&#x107;, Bryce Frederickson, Alexey Pokrovskiy, and Liana Yepremyan</span>
     </li>
+</ul>
+</section>
+<section>
+<h3>Hamiltonicity, spanning trees and graph decompositions</h3>
+<ul class="pub-list">
+<li>
+     <a href="hamiltonicity_final.pdf" target="_blank">Hamiltonicity of mildly pseudorandom regular graphs</a>
+   </li>
+<li>
+      <a href="https://arxiv.org/abs/2603.08675" target="_blank">The Lovász conjecture holds for moderately dense Cayley graphs</a><span class="venue"><b>FOCS</b>, 2026</span>
+      <span class="authors">with Benjamin Bedert, Nemanja Dragani&#x107;, and Mat&iacute;as Pavez-Sign&eacute;</span>
+    </li>
 
-    <li>
+<li>
+      <a href="https://arxiv.org/abs/2311.03185">Spanning trees in pseudorandom graphs via sorting networks</a>
+      <span class="venue"><b>Proceedings of the American Mathematical Society</b>, 2025</span>
+      <span class="authors">with Joseph Hyde, Natasha Morrison, and Mat&iacute;as Pavez-Sign&eacute;</span>
+      <span class="quanta">(mentioned in a <a href="https://www.quantamagazine.org/in-highly-connected-networks-theres-always-a-loop-20240607/">Quanta article</a>)</span>
+    </li>
+<li>
+      <a href="https://arxiv.org/abs/2608.06369">A proof of Andersen's rainbow path conjecture for large <i>n</i></a>
+      <span class="authors">with Candida Bowtell, Richard Montgomery, and Alexey Pokrovskiy</span>
+    </li>
+<li>
+      <a href="https://arxiv.org/abs/2406.02514">Approximate path decompositions of regular graphs</a>
+      <span class="venue"><b>Journal of the London Mathematical Society</b>, 2025</span>
+      <span class="authors">with Richard Montgomery, Alexey Pokrovskiy, and Benny Sudakov</span>
+    </li>
+<li>
+      <a href="https://arxiv.org/abs/2507.20500">New bounds for linear arboricity and related problems</a><span class="venue"><b>Journal of the European Mathematical Society</b>, to appear</span>
+      <span class="authors">with Micha Christoph, Nemanja Dragani&#x107;, Ant&oacute;nio Gir&atilde;o, Eoin Hurley, and Lukas Michel</span>
+    </li>
+</ul>
+</section>
+<section>
+<h3>Random discrete structures and robustness</h3>
+<ul class="pub-list">
+<li>
+     <a href="https://arxiv.org/abs/2607.02483" target="_blank">Robustness and hyperstability for the Erdős-Gallai theorem</a>
+     <span class="authors">with Micha Christoph and Yuval Wigderson</span>
+   </li>
+<li>
+      <a href="https://arxiv.org/abs/2308.08535">Optimal spread for spanning subgraphs of Dirac hypergraphs</a>
+      <span class="venue"><b>Journal of Combinatorial Theory, Series B</b>, 2024</span>
+      <span class="authors">with Tom Kelly and Alexey Pokrovskiy</span>
+    </li>
+<li>
+      <a href="https://arxiv.org/abs/2407.10565">Topological minors in typical lifts</a>
+      <span class="authors">with Matija Buci&#x107;, Micha Christoph, and Raphael Steiner</span>
+    </li>
+<li>
+      <a href="https://arxiv.org/abs/2507.19417">Cycle-factors of regular graphs via entropy</a><span class="venue"><b>FOCS</b>, 2025</span>
+      <span class="authors">with Micha Christoph, Nemanja Dragani&#x107;, Ant&oacute;nio Gir&atilde;o, Eoin Hurley, and Lukas Michel</span>
+    </li>
+</ul>
+</section>
+</section>
+<section id="publications-view" hidden>
+<header class="top"><div class="top-text"><h1>Alp Müyesser</h1></div></header>
+<h2 id="list">Publications</h2>
+<ul class="pub-list">
+<li>
+      <a href="https://arxiv.org/abs/2608.06369">A proof of Andersen's rainbow path conjecture for large <i>n</i></a>
+      <span class="authors">with Candida Bowtell, Richard Montgomery, and Alexey Pokrovskiy</span>
+    </li>
+<li>
+     <a href="hamiltonicity_final.pdf" target="_blank">Hamiltonicity of mildly pseudorandom regular graphs</a>
+   </li>
+<li>
+     <a href="https://arxiv.org/abs/2607.02483" target="_blank">Robustness and hyperstability for the Erdős-Gallai theorem</a>
+     <span class="authors">with Micha Christoph and Yuval Wigderson</span>
+   </li>
+<li>
+     <a href="https://arxiv.org/abs/2606.07471" target="_blank">Dirac subgraphs of powers of cycles are Hamiltonian</a>
+     <span class="authors">with Richard Land, Mathias Schacht, and Carl Schildkraut</span>
+   </li>
+<li>
+      <a href="https://arxiv.org/abs/2603.08675" target="_blank">The Lovász conjecture holds for moderately dense Cayley graphs</a><span class="venue"><b>FOCS</b>, 2026</span>
+      <span class="authors">with Benjamin Bedert, Nemanja Dragani&#x107;, and Mat&iacute;as Pavez-Sign&eacute;</span>
+    </li>
+<li>
+      <a href="https://arxiv.org/abs/2509.05280" target="_blank">On the Graham-Sloane harmonious labelling conjecture</a>
+      <span class="venue"><b>Compositio Mathematica</b>, to appear</span>
+      <span class="authors">with Alexey Pokrovskiy</span>
+    </li>
+<li>
+      <a href="https://arxiv.org/abs/2508.18254" target="_blank">On Graham's rearrangement conjecture over &#x1D53D;<sub>2</sub><sup style="position:relative; left:-0.3em;">n</sup></a>
+      <span class="authors">with Benjamin Bedert, Matija Buci&#x107;, Noah Kravitz, and Richard Montgomery</span>
+      <span class="quanta">(also mentioned in a <a href="https://www.quantamagazine.org/mathematicians-harness-randomness-to-crack-a-55-year-old-conjecture-20260928/">Quanta article</a>)</span>
+    </li>
+<li>
+      <a href="https://arxiv.org/abs/2507.20500">New bounds for linear arboricity and related problems</a><span class="venue"><b>Journal of the European Mathematical Society</b>, to appear</span>
+      <span class="authors">with Micha Christoph, Nemanja Dragani&#x107;, Ant&oacute;nio Gir&atilde;o, Eoin Hurley, and Lukas Michel</span>
+    </li>
+<li>
+      <a href="https://arxiv.org/abs/2507.19417">Cycle-factors of regular graphs via entropy</a><span class="venue"><b>FOCS</b>, 2025</span>
+      <span class="authors">with Micha Christoph, Nemanja Dragani&#x107;, Ant&oacute;nio Gir&atilde;o, Eoin Hurley, and Lukas Michel</span>
+    </li>
+<li>
+      <a href="https://arxiv.org/abs/2503.01826">Cyclic subsets in regular Dirac graphs</a>
+      <span class="venue"><b>IMRN</b>, 2025</span>
+      <span class="authors">with Nemanja Dragani&#x107; and Peter Keevash</span>
+    </li>
+<li>
+      <a href="https://arxiv.org/abs/2503.01825">Towards Graham's rearrangement conjecture via rainbow paths</a>
+      <span class="venue"><b>Advances in Mathematics</b>, 2026</span>
+      <span class="authors">with Matija Buci&#x107;, Bryce Frederickson, Alexey Pokrovskiy, and Liana Yepremyan</span>
+    </li>
+<li>
       <a href="https://arxiv.org/abs/2409.06640">Random embeddings of bounded degree trees with optimal spread</a>
       <span class="venue"><b>Combinatorics, Probability, and Computing</b>, 2025</span>
       <span class="authors">with Paul Bastide and Cl&eacute;ment Legrand-Duchesne</span>
     </li>
-
-    <li>
+<li>
       <a href="https://arxiv.org/abs/2407.10565">Topological minors in typical lifts</a>
       <span class="authors">with Matija Buci&#x107;, Micha Christoph, and Raphael Steiner</span>
     </li>
-
-    <li>
+<li>
       <a href="https://arxiv.org/abs/2303.16157">Cycle type in Hall&ndash;Paige: A proof of the Friedlander&ndash;Gordon&ndash;Tannenbaum conjecture</a>
       <span class="venue"><b>Forum of Mathematics, Sigma</b>, 2026</span>
     </li>
-
-    <li>
+<li>
       <a href="https://arxiv.org/abs/2407.06275">Spanning spheres in Dirac hypergraphs</a>
       <span class="venue"><b>Combinatorica</b>, 2025</span>
       <span class="authors">with Freddie Illingworth, Richard Lang, Olaf Parczyk, and Amedeo Sgueglia</span>
     </li>
-
-    <li>
+<li>
       <a href="https://arxiv.org/abs/2311.03185">Spanning trees in pseudorandom graphs via sorting networks</a>
       <span class="venue"><b>Proceedings of the American Mathematical Society</b>, 2025</span>
       <span class="authors">with Joseph Hyde, Natasha Morrison, and Mat&iacute;as Pavez-Sign&eacute;</span>
       <span class="quanta">(also mentioned in a <a href="https://www.quantamagazine.org/in-highly-connected-networks-theres-always-a-loop-20240607/">Quanta article</a>)</span>
     </li>
-
-    <li>
+<li>
       <a href="https://arxiv.org/abs/2406.02514">Approximate path decompositions of regular graphs</a>
       <span class="venue"><b>Journal of the London Mathematical Society</b>, 2025</span>
       <span class="authors">with Richard Montgomery, Alexey Pokrovskiy, and Benny Sudakov</span>
     </li>
-
-
-    <li>
+<li>
       <a href="https://arxiv.org/abs/2204.09666">A random Hall-Paige conjecture</a>
       <span class="venue"><b>Inventiones Mathematicae</b>, 2025</span>
       <span class="authors">with Alexey Pokrovskiy</span>
     </li>
-
-    <li>
+<li>
       <a href="https://arxiv.org/abs/2308.08535">Optimal spread for spanning subgraphs of Dirac hypergraphs</a>
       <span class="venue"><b>Journal of Combinatorial Theory, Series B</b>, 2024</span>
       <span class="authors">with Tom Kelly and Alexey Pokrovskiy</span>
     </li>
-
-
-    <li>
+<li>
       <a href="https://londmathsoc.onlinelibrary.wiley.com/doi/full/10.1112/blms.12896">A general approach to transversal versions of Dirac-type theorems</a>
       <span class="venue"><b>Bulletin of the London Mathematical Society</b>, 2023</span>
       <span class="authors">with Pranshu Gupta, Fabian Hamann, Olaf Parczyk, and Amedeo Sgueglia</span>
     </li>
-
-    <li>
+<li>
       <a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v30i3p10/pdf">Splitting matchings and the Ryser-Brualdi-Stein conjecture for multisets</a>
       <span class="venue"><b>Electronic Journal of Combinatorics</b>, 2023</span>
       <span class="authors">with Michael Anastos, David Fabian, and Tibor Szab&oacute;</span>
     </li>
-
-    <li>
+<li>
       <a href="https://www.cambridge.org/core/journals/combinatorics-probability-and-computing/article/abs/unavoidable-patterns-in-locally-balanced-colourings/8C1CC0D03AE2F08C2F13117AC6E86ED3">Unavoidable patterns in locally balanced colorings</a>
       <span class="venue"><b>Combinatorics, Probability, and Computing</b>, 2023</span>
       <span class="authors">with Nina Kam&#x10D;ev</span>
     </li>
-
-    <li>
+<li>
       <a href="https://arxiv.org/abs/2107.04629">Transversal factors and spanning trees</a>
       <span class="venue"><b>Advances in Combinatorics</b>, 2022</span>
       <span class="authors">with Richard Montgomery and Yani Pehova</span>
     </li>
-
-    <li>
+<li>
       <a href="https://arxiv.org/abs/2010.02953">On a colored Tur&aacute;n problem of Diwan and Mubayi</a>
       <span class="venue"><b>Discrete Mathematics</b>, 2022</span>
       <span class="authors">with Ander Lamaison and Michael Tait</span>
     </li>
-
-    <li>
+<li>
       <a href="https://arxiv.org/abs/2004.07147">Tur&aacute;n and Ramsey-type results for unavoidable subgraphs</a>
       <span class="venue"><b>Journal of Graph Theory</b>, 2022</span>
       <span class="authors">with Michael Tait</span>
     </li>
-
-    <li>
+<li>
       <a href="https://arxiv.org/abs/1912.06302">Colored unavoidable patterns and balanceable graphs</a>
       <span class="venue"><b>Electronic Journal of Combinatorics</b>, 2023</span>
       <span class="authors">with Matt Bowen, Adriana Hansberg, and Amanda Montejano</span>
     </li>
-
-    <li>
+<li>
       <a href="https://arxiv.org/abs/1807.02780">Finding unavoidable colorful patterns in multicolored graphs</a>
       <span class="venue"><b>Electronic Journal of Combinatorics</b>, 2020</span>
       <span class="authors">with Matt Bowen and Ander Lamaison</span>
     </li>
-
-    <li>
+<li>
       <a href="https://nbdt.scholasticahq.com/article/13477-combining-imagination-and-heuristics-to-learn-strategies-that-generalize">Combining imagination and heuristics to learn strategies that generalize</a>
       <span class="venue"><b>Neurons, Behavior, Data Analysis, and Theory</b>, 2020</span>
       <span class="authors">with Kyle Dunovan, Erik Peterson and Timothy Verstynen</span>
     </li>
-
-    <li>
+<li>
       <a href="https://arxiv.org/abs/1802.08700">The Sprague-Grundy function for some selective compound games</a>
       <span class="venue"><b>Integers</b>, 2020</span>
       <span class="authors">with Calvin Beideman and Matt Bowen</span>
     </li>
-
-  </ul>
-
+</ul>
+<div class="export-tools" id="export-tools" hidden>
+<button type="button" id="export-publications">Save publications.html for hosting</button>
+</div>
+</section>
+</main>
+<script>
+// Fragment navigation works both locally and on static hosting with one file.
+// Export a separate publications.html below if you prefer a second physical page.
+(function () {
+  const local = location.protocol === 'file:';
+  const publicationFile = /(?:^|\/)publications\.html$/.test(location.pathname);
+  function render() {
+    const publications = publicationFile || location.hash === '#publications';
+    document.getElementById('home-view').hidden = publications;
+    document.getElementById('publications-view').hidden = !publications;
+    document.title = publications ? 'Publications — Alp Müyesser' : 'Alp Müyesser';
+    document.querySelectorAll('.site-nav a').forEach(function (link) {
+      const active = publications ? link.hasAttribute('data-publications') : link.hasAttribute('data-home');
+      if (active) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+  }
+  if (!publicationFile) {
+    document.querySelectorAll('[data-publications], [data-home]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        location.hash = link.hasAttribute('data-publications') ? 'publications' : 'home';
+        render();
+        window.scrollTo(0, 0);
+      });
+    });
+    document.getElementById('export-tools').hidden = !local;
+  }
+  document.getElementById('export-publications').addEventListener('click', function () {
+    const page = document.documentElement.cloneNode(true);
+    page.querySelector('#home-view').remove();
+    page.querySelectorAll('[data-home]').forEach(function (a) { a.setAttribute('href', 'index.html'); });
+    page.querySelectorAll('[data-publications]').forEach(function (a) { a.setAttribute('href', 'publications.html'); });
+    page.querySelector('#publications-view').hidden = false;
+    page.querySelector('#export-tools').remove();
+    page.querySelectorAll('script').forEach(function (script) { script.remove(); });
+    page.querySelector('title').textContent = 'Publications — Alp Müyesser';
+    const blob = new Blob(['<!DOCTYPE html>\n' + page.outerHTML], { type: 'text/html;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const download = document.createElement('a');
+    download.href = url;
+    download.download = 'publications.html';
+    document.body.appendChild(download);
+    download.click();
+    download.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  });
+  window.addEventListener('hashchange', render);
+  render();
+})();
+</script>
 </body>
 </html>
